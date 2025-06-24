@@ -4,7 +4,7 @@ This file defines the code conventions that should be followed in this project. 
 
 ## Language
 
--   **All commit messages, comments, documentation, and code annotations must be written in English.**
+-   **All commit messages, pull request, code reviews, issues, documentation, comments, and code must be written in English.**
 -   This ensures consistency across the project and facilitates collaboration with international contributors.
 -   Use clear and concise English to improve readability and maintainability.
 
@@ -261,6 +261,25 @@ This file defines the code conventions that should be followed in this project. 
     fix: Fix bug on registration screen
     docs: Update README.md with installation instructions
     refactor: Improve authMiddleware error handling
+    ```
+
+### Pull Requests
+-   **Guidelines:** Use pull requests (PRs) to review and merge changes. All PRs must be based on branches like `feature/*`, `fix/*`, or similar, and targeted to the `develop` branch for integration. Keep PRs focused on a single functionality or fix.
+-   **Title:** Use a descriptive title, following the Conventional Commits format, to facilitate identification.
+-   **Description:** Include a clear description with:
+  - What was changed.
+  - Why the change was made.
+  - Any impact on other parts of the system.
+  - References to issues or commits related.
+-   **PR Template Example:**
+    ```
+    **Title:** docs: Add pull request guidelines to CONVENTIONS.md
+
+    **Description:**
+    - Added a new section for pull request guidelines, including a standard template.
+    - Reason: Standardize the code review process and improve collaboration.
+    - Impact: Does not affect functional code, only documentation.
+    - References: Related to issue #123 or commit abcdef.
     ```
 
 ## Environment Variables
