@@ -229,6 +229,7 @@ This file defines the code conventions that should be followed in this project. 
     3. Make sure the `.env` file is not added to version control, as it contains sensitive information.
 
 -   **Required Environment Variables:**
+    -   `ALLOW_DATABASE_CLEANUP`: Controls whether database cleanup is allowed (true or false).
     -   `ANTHROPIC_CLAUDE_API_KEY`: Anthropic Claude API key.
     -   `AZURE_SPEECH_REGION`: Azure Speech Region.
     -   `AZURE_SPEECH_RESOURCE_KEY`: Azure Speech Resource Key.
@@ -239,6 +240,8 @@ This file defines the code conventions that should be followed in this project. 
     -   `DB_USER`: Username for the PostgreSQL database.
     -   `GOOGLE_CLOUD_TTS_API_KEY`: Google Cloud Text-to-Speech API key.
     -   `GOOGLE_GEMINI_API_KEY`: Google Cloud Gemini API Key.
+    -   `JWT_SECRET`: Secret key for JWT generation and validation.
+    -   `NODE_ENV`: The environment the application is running in (e.g., 'development', 'production').
     -   `OPENROUTER_API_KEY`: OpenRouter API Key.
     -   `OPENROUTER_YOUR_SITE_NAME`: OpenRouter Name of your site.
     -   `OPENROUTER_YOUR_SITE_URL`: OpenRouter URL of your site.
