@@ -74,8 +74,30 @@ anki-assistant-languages/
 │   └── README.md                     # Documentation for database scripts
 │
 ├── src/                              # Backend application
+│   ├── config/                       # Configuration files
+│   │   ├── aiOptions.ts              # AI service options
+│   │   ├── languageOptions.ts        # Language options
+│   │   ├── serverConfig.ts           # Server configuration
+│   │   └── ttsOptions.ts             # TTS options
+│   ├── controllers/                  # Controllers for handling requests
+│   │   ├── authController.ts         # Authentication controller
+│   │   ├── generationController.ts   # Generation controller
+│   │   ├── optionsController.ts      # Options controller
+│   │   ├── tokenController.ts        # Token controller
+│   │   ├── ttsController.ts          # TTS controller
+│   │   └── userController.ts         # User controller
 │   ├── middlewares/                  # Express middlewares
-│   │   └── authMiddleware.ts         # Authentication middleware
+│   │   ├── authMiddleware.ts         # Authentication middleware
+│   │   └── errorMiddleware.ts        # Error handling middleware
+│   ├── routes/                       # Route definitions
+│   │   ├── authRoutes.ts             # Authentication routes
+│   │   ├── generationRoutes.ts       # Generation routes
+│   │   ├── optionsRoutes.ts          # Options routes
+│   │   ├── tokenRoutes.ts            # Token routes
+│   │   ├── ttsRoutes.ts              # TTS routes
+│   │   └── userRoutes.ts             # User routes
+│   ├── shared/                       # Shared constants and utilities
+│   │   └── constants.ts              # Shared constants
 │   ├── anthropicClaude.ts            # Anthropic Claude API handler
 │   ├── azureTTS.ts                   # Azure Text-to-Speech handler
 │   ├── expressServer.ts              # Express server configuration
