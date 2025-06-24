@@ -28,6 +28,41 @@ This file defines the code conventions that should be followed in this project. 
         -   `chore/*`: For maintenance tasks like dependency updates or configuration changes (e.g., `chore/update-dependencies`).
         -   `test/*`: For adding or improving tests (e.g., `test/add-user-auth-tests`).
 
+## Comments
+
+-   **Comments:** Use consistent commenting styles to improve code readability and maintainability. Comments should be written in English and follow these guidelines:
+    -   **File-Level TSDoc Comments (`/** ... */`):** Place at the top of the file to describe its overall purpose, dependencies, and responsibilities. This should be the first comment in the file.
+        -   Example:
+            ```typescript
+            /**
+             * @fileOverview Main component that renders the internal application layout
+             * and manages features like card generation and saved items.
+             * 
+             * @dependencies
+             * - react: For building components and state management.
+             * - react-markdown: For rendering Markdown content.
+             * - styled-components: For component styling.
+             * - utils/handleGenerateTTS: For TTS audio generation.
+             * - utils/useAuth: For authentication and authenticated API calls.
+             */
+            ```
+    -   **Structured TSDoc Comments (`/** ... */`):** Document specific code elements like functions, variables, types, and exported constants. Use TSDoc tags (e.g., @param, @returns, @description, @throws) for structured details that integrate with tools like IDEs and documentation generators.
+        -   Example:
+            ```typescript
+            /**
+             * @description Retrieves the list of available AI service providers.
+             * Sends a JSON response containing the `apiServiceOptions` array.
+             * Handles potential errors during the process.
+             *
+             * @param {Request} req - Express request object.
+             * @param {Response} res - Express response object.
+             * @throws {Error} If an error occurs while fetching API services, such as network issues or invalid data.
+             */
+            export function getApiServices(req: Request, res: Response): void { ... }
+            ```
+    -   **Simple Comments (`// ...`):** Use for short, direct explanations on a single line or to temporarily disable code. Keep them concise and focused.
+        -   Example: `// Debug log to check the request body` or `// const oldVariable = 5;`
+
 ## Frontend (React/TypeScript)
 
 -   **Components:** Create reusable components and keep them small and focused on a single responsibility.
