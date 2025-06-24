@@ -224,16 +224,8 @@ This file defines the code conventions that should be followed in this project. 
     ```
     feat: Add login functionality
     fix: Fix bug on registration screen
-    docs: Update `README.md` with installation instructions
-    refactor: Improve `authMiddleware` error handling
-    ```
-
--   **Code Highlighting in Commit Messages:** When mentioning file names, functions, variables, or similar code elements within commit messages, always highlight them using backticks.
--   Example:
-    ```markdown
-    feat: Update `Login.tsx` component
-
-    This commit updates the `handleLogin` function in the `Login.tsx` component to use the new authentication service.
+    docs: Update README.md with installation instructions
+    refactor: Improve authMiddleware error handling
     ```
 
 ## Environment Variables
