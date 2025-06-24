@@ -4,9 +4,9 @@ This file defines the code conventions that should be followed in this project. 
 
 ## Language
 
-- **All commit messages, comments, documentation, and code annotations must be written in English.**
-- This ensures consistency across the project and facilitates collaboration with international contributors.
-- Use clear and concise English to improve readability and maintainability.
+-   **All commit messages, comments, documentation, and code annotations must be written in English.**
+-   This ensures consistency across the project and facilitates collaboration with international contributors.
+-   Use clear and concise English to improve readability and maintainability.
 
 ## General
 
@@ -19,6 +19,14 @@ This file defines the code conventions that should be followed in this project. 
 -   **Comments:** Comment the code clearly and concisely, explaining the purpose of complex code blocks.
 -   **Imports:** Organize imports alphabetically and separate imports from external libraries from internal imports.
 -   **Typing:** Use strong typing whenever possible, especially in TypeScript.
+-   **Branch Naming:** Use descriptive branch names that indicate the scope and purpose of the change. For projects with distinct frontend and backend components, prefix branches with `frontend/` or `backend/` to clearly delineate the area of work.
+    -   Examples: `frontend/feature/user-profile`, `backend/bugfix/auth-error`, `docs/update-readme`.
+    -   Use full prefixes for clarity, such as `frontend/` or `backend/` for projects with distinct frontend and backend components, ensuring they are documented and understood by the team.
+    -   **Additional Prefixes**: To further categorize branches, consider using the following prefixes:
+        -   `docs/*`: For changes related to documentation (e.g., `docs/update-conventions`).
+        -   `refactor/*`: For code refactoring that doesn't change functionality (e.g., `refactor/improve-auth-middleware`).
+        -   `chore/*`: For maintenance tasks like dependency updates or configuration changes (e.g., `chore/update-dependencies`).
+        -   `test/*`: For adding or improving tests (e.g., `test/add-user-auth-tests`).
 
 ## Frontend (React/TypeScript)
 
@@ -171,11 +179,18 @@ This file defines the code conventions that should be followed in this project. 
 ## Git
 
 ### Git Workflow (Gitflow)
--   **`main` (or `master`):** Main branch containing the production code.
+-   **`master`:** Main branch containing the production code.
 -   **`develop`:** Main branch for integrating new features.
 -   **`feature/*`:** Branches for developing new features. Create a branch for each new feature from `develop`.
+-   **`frontend/*`:** Branches for frontend-specific changes, such as React components or UI updates. Create from `develop`.
+-   **`backend/*`:** Branches for backend-specific changes, such as API routes or services. Create from `develop`.
 -   **`release/*`:** Branches for preparing releases. Create a branch from `develop` when you are ready to release a new version.
--   **`hotfix/*`:** Branches for urgent fixes in production. Create a branch from `main` when you need to fix an urgent bug.
+-   **`hotfix/*`:** Branches for urgent fixes in production. Create a branch from `master` when you need to fix an urgent bug.
+-   **`fix/*`:** Branches for non-urgent bug fixes. Create a branch for each fix from `develop`.
+-   **`docs/*`:** Branches for documentation updates. Create from `develop` for changes in README, CONVENTIONS, etc.
+-   **`refactor/*`:** Branches for code refactoring that improves code quality without changing functionality. Create from `develop`.
+-   **`chore/*`:** Branches for maintenance tasks like dependency updates, build process changes, or configuration updates. Create from `develop`.
+-   **`test/*`:** Branches for adding or improving tests, such as unit, integration, or end-to-end tests. Create from `develop`.
 
 ### Commit Messages
 -   Use clear and concise commit messages, explaining the purpose of the change.
