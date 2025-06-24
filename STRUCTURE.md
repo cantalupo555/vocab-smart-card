@@ -117,21 +117,7 @@ anki-assistant-languages/
 
 ## Environment Variables
 
-The `.env` file (created from `.env.tmp`) contains sensitive information and should **not** be committed to version control. Required variables include:
-
-- `ANTHROPIC_CLAUDE_API_KEY`: Anthropic Claude API key
-- `AZURE_SPEECH_REGION`: Azure Speech Region
-- `AZURE_SPEECH_RESOURCE_KEY`: Azure Speech Resource Key
-- `DB_DATABASE`: PostgreSQL database name
-- `DB_HOST`: Database host address
-- `DB_PASSWORD`: Database password
-- `DB_PORT`: Database port
-- `DB_USER`: Database username
-- `GOOGLE_CLOUD_TTS_API_KEY`: Google Cloud TTS API key
-- `GOOGLE_GEMINI_API_KEY`: Google Gemini API key
-- `OPENROUTER_API_KEY`: OpenRouter API key
-- `OPENROUTER_YOUR_SITE_NAME`: OpenRouter site name
-- `OPENROUTER_YOUR_SITE_URL`: OpenRouter site URL
+Refer to the `CONVENTIONS.md` file for detailed information on environment variables, including required settings and how to configure the `.env` file. This ensures consistency and up-to-date documentation.
 
 ## Notes
 
